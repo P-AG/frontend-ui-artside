@@ -2,9 +2,10 @@ html {
 	height: 100%;
     min-width: 1024px;
 }
-/*article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
 	display: block;
-}*/
+}
+
 
 /* Common
 -----------------------------------------------------------------------------*/
@@ -16,44 +17,40 @@ body {
     color: #363636;
 	width: 100%;
 	height: 100%;
-    margin: 0;
-    
+    margin: 0; 
 }
 .wrapper {
-    width: 1024px;
+	width: 1000px;
 	margin: 0 auto;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 }
-
 a {
     color: #363636;
 }
-
 a:hover {
     cursor: pointer;
 }
-
 ul {
     margin-left: 0;
     padding-left: 0;
 }
-
-h1,
-h2 {
+h1, h2 {
     font-family: DINCyr, sans-serif;
     font-size: 18px;
     font-weight: normal;
     line-height: 38px;
-    color: rgba(112, 112, 112, 0.60);
+    color: rgb(112, 112, 112);
 }
+
 
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
     position: relative;
 	height: 100px;
+    margin-bottom: 100px;
 }
 
 .header .logo {
@@ -68,7 +65,7 @@ h2 {
     height: auto;
 }
 
-.telefon {
+.fone {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -76,39 +73,83 @@ h2 {
     font-size: 30px;
     font-weight: lighter;
     line-height: 26px;
-    color: rgba(112, 112, 112, 0.60);
+    color: rgb(112, 112, 112);
 }
 
-.telefon p {
-    margin-bottom: 0;
-}
-
-.telefon .code {
+.fone .code {
     font-size: 18px;
 }
 
 
 /* Middle
 -----------------------------------------------------------------------------*/
-.content {
-    position: relative;
+.middle {
+	width: 100%;
 	padding: 0 0 100px;
-    margin-top: 100px;
+	position: relative;
 }
-
-/* Container
------------------------------------------------------------------------------*/
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
 .container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+.content {
+	margin-left: 250px;
+}
+.staff {
     display: inline-block;
+    width: 245px;
+    vertical-align: top;
+}
+.content .elbows {
+    margin: 0 3px;
+}
+div .photo {
+    height: 78px;
+    width: 78px;
+    background: #707070;
+    overflow: hidden;
+    margin: 0 3px 0 0;
+}
+.workers img {
+    display: block;
+    width: auto;
+    height: 78px;
+    margin: 0 auto;
+}
+.staff ul {
+    list-style: none;
+}
+.staff li {
+    margin-bottom: 20px;
 }
 
-.content .menu {
+.photo {
+    display: inline-block;
+    width: auto;
+}
+.name {
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+}
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+    position: relative;
+	width: 250px;
+}
+.left-sidebar .menu {
     position: absolute;
     left: 0;
     width: auto;
 }
-
-.container .menu a {
+.left-sidebar .menu a {
     font-family: DINPro, sans-serif;
     font-size: 40px;
     font-weight: lighter;
@@ -116,72 +157,21 @@ h2 {
     color: #363636;
     text-decoration: none;
 }
-
-.container .menu a:hover {
+.left-sidebar .menu a:hover {
     color: #ffffff;
     background-color: rgb(112,112,112);
 }
-
-.container ul {
-     list-style: none;
+.left-sidebar ul {
+    list-style: none;
 }
 
-.content .promo {
-    position: absolute;
-    right: 0;
-    margin-left: 256px;
-    width: auto;
-}
 
-/* Workers
------------------------------------------------------------------------------*/
-.box {
-    position: relative;
-    margin-top: 180px;
-    margin-left: 256px;
-}
-.workers {
-   
-}
-
-.left-column, .center-column, .right-column {
-    width: 256px;
-    float: left;
-}
-
-.workers .staff {
-    display: inline-block;
-}
-
-.workers div {
-    height: 78px;
-    width: 78px;
-    background: #707070;
-    overflow: hidden;
-}
-
-.workers div img {
-    display: block;
-    width: auto;
-    height: 78px;
-    margin: 0 auto;
-}
-
-.workers .staff.wide img {
-    margin: auto -22px;
-}
-
-article .services {
-    position: absolute;
-    margin-bottom: 50px;
-    margin-left: 256;
-}
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-    position: relative;
+	position: relative;
     box-sizing: border-box;
-	width: 1024px;
+	width: 1000px;
 	margin: -100px auto 0;
     padding: 40px 0;
 	height: 100px;
@@ -189,20 +179,23 @@ article .services {
     font-family: Verdana, Arial, sans-serif;
     font-size: 11px;
     line-height: normal;
-    color: rgba(112, 112, 112, 0.60);
+    color: rgb(112, 112, 112);
 }
-
+#netadress {
+    display: inline;
+    width: auto; 
+/*    float: left;*/
+}
 .footer a {
-    color: rgba(112, 112, 112, 0.60);
-    text-decoration: none;
+    color: rgb(112, 112, 112);
+    display: inline-block;
 }
-
-.footer a:hover{
+/*.footer a:hover{
 	text-decoration: underline;
-}
+}*/
 
 .footer .footermenu {
-    position: absolute;
-    left: 129px;
-    top: 40px;
+    display: inline;
+    margin-left: 50px;
+/*    top: 40px;*/
 }
